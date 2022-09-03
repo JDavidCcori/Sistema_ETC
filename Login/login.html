@@ -2,126 +2,102 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        <title>Administración de la ETP</title>
-
-        <meta name="KEYWORDS" content="Sistema academico, UNAJMA">
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+        <title>Administración de la ETP</title>
+        <style>
+            :root {
+                --white: #FFFFFF;
+                --black: #000000;
+                --very-ligth-pink: #C7C7C7;
+                --text-input-fiend: #F7F7F7;
+                --hospital-green: #ACD9B2;
+            }
+            body {
+                margin: 0;
+                font-family: 'Quicksand', sans-serif;
+            }
+            .login {
+                width: 100%;
+                height: 100vh;
+                display: grid;
+                place-items: center;
+            }
+            .form-container {
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                width: 300;
+            }
+            .logo {
+                width: 150px;
+                margin-bottom: 48px;
+                justify-self: center;
+                display: none;
+            }
+            .title {
+                font-size: var(--lg);
+                margin-bottom: 12px;
+                text-align: center;
+            }
+            .subtitle {
+                color: var(--very-ligth-pink);
+                font-size: var(--md);
+                font-weight: 300;
+                margin-top: 0;
+                margin-bottom: 32px;
+                text-align: center;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+            }
+            .label {
+                font-size: var(--sm);
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .input {
+                background-color: var(--text-input-fiend);
+                border: none;
+                border-radius: 8px;
+                height: 32px;
+                font-size: var(--md);
+                padding: 8px;
+                margin-bottom: 12px;
+            }
+            .primary-button {
+                background-color: var(--hospital-green);
+                border-radius: 8px;
+                border: none;
+                color: var(--white);
+                width: 100%;
+                cursor: pointer;
+                font-size: var(--md);
+                font-weight: bold;
+                height: 52px;
+            }
+            .login-button {
+                margin-top: 16px;
+                margin-bottom: 32px;
+            }
+        </style>
     </head>
     <body onLoad="document.frmlogin.txtUsuario.focus();">
-        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tbody>
-        <tr>
-        <td width="48%" bgcolor="#b40000">
-        &nbsp;<img src="../imageneszet/logo.png" width="250" height="40" alt="Logo" />
-        </td>		
-        </tr>
-        </table><form name="frmlogin" method="post" action="validacion.php" id="frmlogin">
-        <table cellpadding="0" cellspacing="0" width="101%" border="0">
-        <tr valign="top">
-        <td>	
-            &nbsp;<br>
-            <center>
-            <table border="1" cellpadding="0" cellspacing="0" width="600">	
-                <tr>
-                    <td bgcolor="#b40000" width="50">&nbsp;																													
-                    </td>
-                    <td>
-                        <table width="500" border="0" align="center">
-                            <tr>
-                                <td>
-                                    <table border="0">
-                                        <tr valign="top">
-                                            <td align="right" width="48">
-                                                <img src="../imageneszet/logosiga.jpg" border="0" alt="logosiga">
-                                            </td>
-                                            <td align="left">
-                                                <b>
-                                                SIGA-Web Universidad Nacional Jos&eacute; Mar&iacute;a Arguedas<br>
-                                                <font color="#b40000">Acceso al sistema
-                                                </font></b><br>
-                                                <span class="mensajeloco">Ingrese usuario y password.</span>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <center>
-                                    <table border="0" cellpadding="5" cellspacing="5" width="100%">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <table border="0" align="center" width="300">
-                                                    <tr>
-                                                        <td colspan="2" align="center">
-                                                            <img src="../imageneszet/logo.jpg" alt="Logo Instituci&oacute;n" />
-                                                        </td>                                                        
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="2" align="center">
-                                                            &nbsp;&nbsp;
-                                                        </td>  
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="right">
-                                                            <strong>
-                                                            Perfil
-                                                            </strong>
-                                                        </td>
-                                                        <td align="left">
-                                                            <select name="cboNivel">
-                                                                <option selected value="A" selected>Alumno</option>
-                                                                <option value="D" >Docente</option>									
-                                                                <option value="S" >Administrativo</option>
-                                                                <option value="R" >Responsable</option>
-                                                            </select>						
-                                                        </td>														
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="right">
-                                                            <strong>
-                                                            Usuario
-                                                            </strong>
-                                                        </td>													
-                                                        <td align="left">
-                                                            <input name="txtUsuario" type="text" tabindex="1" value="" size="30" maxlength="10">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="right">
-                                                            <strong>
-                                                            Password
-                                                            </strong>
-                                                        </td>			
-                                                        <td>
-                                                            <input name="txtnip" type="password" tabindex="2" size="30" maxlength="10">
-                                                        </td>
-                                                    </tr>	
-                                                    <tr>
-                                                        <td colspan="2" align="center">
-                                                        
-                                                            <input tabindex="3" name="Login" value="INGRESAR" type="submit" class="BOTON">	
-                                                        </td>		
-                                                    </tr>														
-                                                </table>
-                                            </td>
-                                        </tr>																					
-                                    </tbody>
-                                    </table>
-                                    </center>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-            </center>
-            <br><br><br><br>
-            <center><font color="colorZ" face="arial" size="1">SISTEMA AMINISTRADOR: EMPRESA DE TRANSPORTES CUADROS.</font></center>
-        </td>
-        </tr>
-        </table>
-        </form>
+        <div class="login">
+            <div class="form-fontainer">
+                <img src="/img/enEsperaDelLogo.png" alt="logo" class="logo">
+                <h1 class="title">Crear un contraseña</h1>
+                <p class="subtitle">Ingrese una contraseña</p>
+                <form action="/" class="form">
+                    <label for="password" class="label">Contraseña</label>
+                    <input type="password" id="password" placeholder="********" class="input input-password">
+                    <label for="repit-password" class="label">Repita la contraseña</label>
+                    <input type="password" id="repit-password" placeholder="********" class="input input-password">
+                    <input type="submit" value="Confirmar" class="primary-button login-button">
+                </form>
+            </div>
+        </div>
     </body>
 </html>
